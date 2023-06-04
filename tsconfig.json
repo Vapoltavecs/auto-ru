@@ -4,8 +4,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -15,15 +14,15 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
+    "allowSyntheticDefaultImports": true,
     "paths": {
-      "@components/*": ["./components/*"],
-      "@api/*": ["./api/*"],
-      "@assets/*": ["./assets/*"],
+      "@app/*": ["./app/*"],
+      "@api/*": ["./shared/api/*"],
+      "@assets/*": ["./app/assets/*"],
       "@shared/*": ["./shared/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@store/*": ["./store/*"],
-      "@models/*": ["./types/*"],
-      "@constants/*": ["./constants/*"]
+      "@store/*": ["./app/store/*"],
+      "@pages/*": ["./pages/*"],
+      "@widgets/*": ["./widgets/*"]
     }
   },
   "include": ["src"],

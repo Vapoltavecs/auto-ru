@@ -1,0 +1,23 @@
+.logo
+    max-width: 200px
+.header
+    padding: 20px 30px
+    box-sizing: border-box
+    border-bottom:  1px solid var(--primary-border)
+    position: sticky
+    top: 0
+    background: white
+    z-index: 100
+    transition: background var(--transition-duration-s)
+    &.dark
+        background: var(--primary-color)
+        border-bottom:  1px solid var(--inverted-primary-border)
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__menu
+        display: flex
+        align-items: center
+        gap: 30px
+    

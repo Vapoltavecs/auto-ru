@@ -1,0 +1,54 @@
+.Modal
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background: var(--primary-color)
+    transition: all var(--transition-duration-m)
+    opacity: 0
+    z-index: 100
+    
+    & > .content
+        padding: 10px
+        min-width: 30vw
+        min-height: 30vh
+        border-radius: var(--border-radius-m)
+        transform: translateY(-200%)
+        transition: transform var(--transition-duration-m)
+    &.light > .content
+        background: var(--inverted-primary-color)
+    &.dark > .content
+        background: var(--black-color)
+    &.dark
+        background: var(--dark-gray-color)
+    &.opens
+        animation: open var(--transition-duration-m) forwards  
+        & > .content
+            animation: openContent var(--transition-duration-m) forwards
+    &.open
+        opacity: .7
+        & > .content
+            transform: translateY(0%)
+    
+    &.closes
+        opacity: 0
+        & > .content
+            transform: translateY(300%)
+        
+    
+    
+
+@keyframes open 
+    from
+        opacity: 0
+    to
+        opacity: .7
+@keyframes openContent 
+    from
+        transform: translateY(-200%)
+    to
+        transform: translateY(0%)
