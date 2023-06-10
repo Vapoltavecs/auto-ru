@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "node",
@@ -15,16 +19,44 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "paths": {
-      "@app/*": ["./app/*"],
-      "@api/*": ["./shared/api/*"],
-      "@assets/*": ["./app/assets/*"],
-      "@shared/*": ["./shared/*"],
-      "@store/*": ["./app/store/*"],
-      "@pages/*": ["./pages/*"],
-      "@widgets/*": ["./widgets/*"]
+      "@app/*": [
+        "./app/*"
+      ],
+      "@api/*": [
+        "./shared/api/*"
+      ],
+      "@assets/*": [
+        "./app/assets/*"
+      ],
+      "@shared/*": [
+        "./shared/*"
+      ],
+      "@store/*": [
+        "./app/store/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@widgets/*": [
+        "./widgets/*"
+      ],
+      "@features/*": [
+        "./features/*"
+      ],
+      "@entities/*": [
+        "./entities/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "setupTest.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

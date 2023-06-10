@@ -7,12 +7,12 @@ type SwitcherProps = {
     className?: string
     theme: Themes,
     active: boolean,
-    setActive: Dispatch<SetStateAction<boolean>>,
+    onSwitch: () => void,
 }
 
-const Switcher: FC<SwitcherProps> = memo(({ className, theme, active, setActive }) => {
+const Switcher: FC<SwitcherProps> = memo(({ className, theme, active, onSwitch }) => {
     const clickHanlder = useCallback(() => {
-        setActive(active => !active)
+       onSwitch()
     }, [active])
     return <button className={classNames(cls.Switcher, { [cls.active]: active }, [className, cls[theme]])} onClick={clickHanlder}><div className={classNames(cls.round)}></div></button>
 })

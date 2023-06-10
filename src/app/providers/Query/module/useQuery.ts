@@ -13,7 +13,6 @@ export const useQuery = <T, Error = any>(name: string, options: Options<T>) => {
 
     const requestData = async () => {
         try {
-            console.log(1)
             setLoading(true)
             const res = await options.queryFn()
             setData(res)

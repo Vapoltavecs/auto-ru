@@ -6,7 +6,6 @@ export const useTheme = () => {
     const { theme, setTheme } = useContext(ThemeContext)
 
     const switchTheme = useCallback((newTheme?: Themes) => {
-        console.log(setTheme)
         if (newTheme) {
             setTheme(newTheme)
         } else {

@@ -1,6 +1,7 @@
 import { FC, SetStateAction, useState } from 'react'
 import { Themes, useTheme } from '@app/providers/ThemeProvider'
 import Switcher from '@shared/ui-kit/Switcher'
+import { useCallback } from 'react'
 
 type ThemeSwitcherProps = {
     className?: string
@@ -12,13 +13,13 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
     const { theme, switchTheme } = useTheme()
     const [isActive, setActive] = useState(defaultState)
 
-    const changeTheme = (isActive: SetStateAction<boolean>) => {
+    const changeTheme = useCallback(() => {
         switchTheme()
-        setActive(isActive)
-    }
+        setActive(active => !active)
+    }, [theme, isActive])
 
     return (
-        <Switcher theme={theme} active={isActive} setActive={changeTheme} />
+        <Switcher theme={theme} active={isActive} onSwitch={changeTheme} />
     )
 }
 

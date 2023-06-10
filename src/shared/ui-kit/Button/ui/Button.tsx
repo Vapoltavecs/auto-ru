@@ -13,11 +13,11 @@ type ButtonProps = {
   className?: string,
   view: ButtonViews,
   children: ReactNode,
-  theme: Themes
+  theme?: Themes
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 
-const Button: FC<ButtonProps> = ({ className, view, children, theme, ...otherProps }) => {
+const Button: FC<ButtonProps> = ({ className, view, children, theme = Themes.LIGHT, ...otherProps }) => {
   return <button className={classNames(cls.Button, {}, [className, cls[view], cls[theme]])} {...otherProps}>{children}</button>
 }
 
