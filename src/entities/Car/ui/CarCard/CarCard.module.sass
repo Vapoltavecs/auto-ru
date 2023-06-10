@@ -1,0 +1,44 @@
+.card
+    $root: &
+    display: flex
+    &__header
+            display: flex
+            align-items: center
+    &__footer
+            display: flex
+            align-items: center
+    &.dark
+        color: var(--inverted-primary-color)
+    &.grid
+        flex-direction: column
+        #{$root}__content
+            padding: 20px
+        #{$root}__header
+            justify-content: space-between
+        #{$root}__image
+            transition: all var(--transition-duration-s)
+            width: 100%
+            overflow: hidden
+            &:hover
+                transform: scale(1.08)
+        #{$root}__image-wrapper
+            overflow: hidden
+        #{$root}__footer
+            justify-content: space-between
+            margin-top: 10px
+    &.list
+        display: flex
+        align-items: center
+        gap: 10px
+        #{$root}__image
+            height: 80px
+        #{$root}__header
+            gap: 10px
+        #{$root}__content
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            padding: 15px
+        #{$root}__footer
+            gap: 20px

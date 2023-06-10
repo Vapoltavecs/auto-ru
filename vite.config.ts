@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-const conf = require("./src/utils/configure.ts")
+const configureAliases = require("./src/shared/lib/configure/configure.ts")
+const config = require("./tsconfig.json")
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: conf.configureAliases()
+    alias: configureAliases.default(config.compilerOptions.paths)
   }
 })

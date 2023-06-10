@@ -1,1 +1,0 @@
-export { CarCard as default } from "./CarCard"

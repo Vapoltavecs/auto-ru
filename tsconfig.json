@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -15,17 +18,45 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "paths": {
-      "@components/*": ["./components/*"],
-      "@api/*": ["./api/*"],
-      "@assets/*": ["./assets/*"],
-      "@shared/*": ["./shared/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@store/*": ["./store/*"],
-      "@models/*": ["./types/*"],
-      "@constants/*": ["./constants/*"]
+      "@app/*": [
+        "./app/*"
+      ],
+      "@api/*": [
+        "./shared/api/*"
+      ],
+      "@assets/*": [
+        "./app/assets/*"
+      ],
+      "@shared/*": [
+        "./shared/*"
+      ],
+      "@store/*": [
+        "./app/store/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@widgets/*": [
+        "./widgets/*"
+      ],
+      "@features/*": [
+        "./features/*"
+      ],
+      "@entities/*": [
+        "./entities/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "setupTest.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

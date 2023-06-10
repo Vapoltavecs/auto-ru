@@ -1,0 +1,1 @@
+export type TRequest<T> = T | null
