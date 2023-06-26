@@ -3,7 +3,6 @@ import { useQuery } from '@app/providers/Query'
 import { useTheme } from '@app/providers/ThemeProvider'
 import CarCardList, { ICar } from '@entities/Car'
 import { FC } from 'react'
-import cls from './MainPage.module.sass'
 
 type MainPageProps = {
     className?: string

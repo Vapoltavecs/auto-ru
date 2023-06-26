@@ -1,4 +1,4 @@
-import { Dispatch, FC, memo, SetStateAction, useCallback } from 'react'
+import { FC, memo, useCallback } from 'react'
 import cls from './Switcher.module.sass'
 import { classNames } from '@shared/lib/classNames/classNames'
 import { Themes } from '@app/providers/ThemeProvider'
