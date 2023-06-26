@@ -1,4 +1,4 @@
-import MainPage from "@pages/MainPage/ui/MainPage"
+import MainPage from "@pages/MainPage"
 import { RouteProps } from "react-router-dom"
 
 

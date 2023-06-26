@@ -9,7 +9,6 @@ import { TRequest } from "@shared/lib/types/types"
 import { useState } from 'react'
 import Switcher from '@shared/ui-kit/Switcher'
 import { useCallback } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
 
 type CarCardListProps = {
     className?: string,
